@@ -1,1 +1,6 @@
 reddit-app.retry
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/

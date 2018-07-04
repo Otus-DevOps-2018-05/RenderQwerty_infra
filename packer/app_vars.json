@@ -1,0 +1,10 @@
+{
+    "project_id": "infra-207219",
+    "source_image_family": "ubuntu-1604-lts",
+    "ssh_username": "appuser",
+    "image_description": "ubuntu image with installed ruby",
+    "disk_size": "10",
+    "disk_type": "pd-standard",
+    "tags": "puma-server",
+    "network": "default"
+}
