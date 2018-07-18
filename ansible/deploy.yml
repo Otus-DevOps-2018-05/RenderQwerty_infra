@@ -1,0 +1,21 @@
+---
+- name: Deploy apps
+  hosts: reddit-app
+  tags: deploy-tag
+  tasks:
+    - name: Clone reddit-app from github
+      git:
+        repo: 'https://github.com/express42/reddit.git'
+        dest: /home/appuser/reddit
+        version: monolith
+
+    - name: Install bundle dependencies
+      bundler:
+        state: present
+        chdir: /home/appuser/reddit
+      notify: Restart Puma
+
+  handlers:
+   - name: Restart Puma
+     become: true
+     service: name=puma state=restarted

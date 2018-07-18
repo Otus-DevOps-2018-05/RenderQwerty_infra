@@ -47,7 +47,7 @@ variable "source_range" {
 
 variable "app_provision_status" {
   description = "enable or disable provision scripts"
-  default     = "true"
+  default     = "false"
 }
 
 variable "ssh_port" {

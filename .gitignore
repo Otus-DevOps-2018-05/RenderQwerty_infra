@@ -1,9 +1,9 @@
-reddit-app.retry
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
-*gce.ini
-*key.json
-*vault.key
+*.retry
+ansible/key.json
+ansible/vault.key
+ansible/gce.ini

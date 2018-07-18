@@ -1,3 +1,15 @@
+ # Homework 09 - ansible-1
+ В качестве dynamic inventory в этот раз решил использовать gce.py (в прошлом ДЗ пользовался https://github.com/adammck/terraform-inventory). Для его настройки необходимо создать сервисный аккаунт, от имени которого будет работать скрипт:
+- `gcloud iam service-accounts create ansible --display-name "Ansible service account"`
+- `gcloud projects add-iam-policy-binding compute-trial --member serviceAccount:ansible@infra-12345.iam.gserviceaccount.com --role roles/editor`
+- `gcloud iam service-accounts keys create key.json --iam-account=ansible@infra-12345.iam.gserviceaccount.com`
+
+В конфигурационный файл gce.ini внёс нужные параметры и добавил его в .gitignore, чтобы не показывать публично id gcloud проекта.
+Пример настройки оставил в файле gce.ini.example.
+
+Также, т.к. у меня имеется сторонние отключенные хосты, не связанные с ДЗ, то ограничим область видимости теми тегами, которые нас интересуют:
+- `./gce.py --instance-tags reddit-app,reddit-db --refresh-cache`
+
 # Homework 08 - ansible-1
 Командой `ansible app -m command -a 'rm -rf ~/reddit'` мы удалили каталог /home/appuser/reddit, соответственно при запуске плейбука ansible увидит, что целевого каталога не существует и выполнит клонирование из github. 
 ### Задание со *

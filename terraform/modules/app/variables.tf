@@ -25,16 +25,16 @@ variable "source_range" {
   description = "allow access from this addresses"
 }
 
+variable "db_address" {
+  description = "Database internal ip"
+}
+
 variable "puma_env" {
   description = "Path to env file for systemd puma unit"
   default     = "/tmp/puma.env"
 }
 
-variable "db_address" {
-  description = "Database internal ip"
-}
-
 variable "app_provision_status" {
   description = "enable or disable provision scripts"
-  default     = "true"
+  default     = "false"
 }
