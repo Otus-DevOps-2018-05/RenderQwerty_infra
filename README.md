@@ -1,4 +1,4 @@
- # Homework 09 - ansible-1
+ # Homework 09 - ansible-2
  В качестве dynamic inventory в этот раз решил использовать gce.py (в прошлом ДЗ пользовался https://github.com/adammck/terraform-inventory). Для его настройки необходимо создать сервисный аккаунт, от имени которого будет работать скрипт:
 - `gcloud iam service-accounts create ansible --display-name "Ansible service account"`
 - `gcloud projects add-iam-policy-binding compute-trial --member serviceAccount:ansible@infra-12345.iam.gserviceaccount.com --role roles/editor`
