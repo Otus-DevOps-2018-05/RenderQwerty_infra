@@ -2,6 +2,9 @@
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra)
 
  # Homework 12 - docker-1
+ - В случае запуска docker контейнера с аргументом `--pid host` мы запускаем контейнер в неймспейсе нашей локальной машины, и таким образом предоставляем процессам внутри контейнера доступ к процессам хоста. 
+
+ # Homework 12 - docker-1
  - Установлен docker и протестирован его успешный запуск
  - Разобраны методы управления состоянием и статусом контейнеров.
  ### Задание со *
