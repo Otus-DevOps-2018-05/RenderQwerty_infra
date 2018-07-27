@@ -1,0 +1,6 @@
+---
+- name: Configure MongoDB
+  hosts: all
+  become: true
+  roles:
+    - renderqwerty.ansible_role_mongo
