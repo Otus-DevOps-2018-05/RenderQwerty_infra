@@ -1,4 +1,4 @@
-project = "docker-211515"
+project = "docker-1234566"
 
 region = "europe-west4"
 
@@ -10,4 +10,4 @@ private_key_path = "~/.ssh/appuser"
 
 disk_image = "docker-host"
 
-instance_count = "1"
+instance_count = "2"
