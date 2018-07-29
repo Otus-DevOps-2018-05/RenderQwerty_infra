@@ -17,7 +17,7 @@ variable docker_disk_image {
 
 variable "puma_port" {
   description = "TCP port that puma server listen's"
-  default     = ["9292"]
+  default     = "9292"
 }
 
 variable "source_range" {
@@ -25,12 +25,7 @@ variable "source_range" {
   description = "allow access from this addresses"
 }
 
-variable "puma_env" {
-  description = "Path to env file for systemd puma unit"
-  default     = "/tmp/puma.env"
-}
-
-variable "docker_provision_status" {
-  description = "enable or disable provision scripts"
-  default     = "false"
+variable "instance_count" {
+  description = "Count of docker instances for load balancing"
+  default     = "2"
 }

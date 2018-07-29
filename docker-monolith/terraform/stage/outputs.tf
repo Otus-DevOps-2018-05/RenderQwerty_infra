@@ -1,3 +1,7 @@
-output "docker_external_ip" {
-  value = "${module.docker.docker_external_ip}"
+output "instance_ip" {
+  value = "${module.docker.docker_ip}"
+}
+
+output "public_ip" {
+  value = "${module.docker.public_ip}"
 }

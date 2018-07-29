@@ -5,13 +5,12 @@ provider "google" {
 }
 
 module "docker" {
-  source                  = "../modules/docker"
-  public_key_path         = "${var.public_key_path}"
-  private_key_path        = "${var.private_key_path}"
-  zone                    = "${var.zone}"
-  source_range            = "${var.source_range}"
-  docker_disk_image       = "${var.docker_disk_image}"
-  docker_provision_status = "${var.docker_provision_status}"
+  source            = "../modules/docker"
+  public_key_path   = "${var.public_key_path}"
+  private_key_path  = "${var.private_key_path}"
+  zone              = "${var.zone}"
+  source_range      = "${var.source_range}"
+  docker_disk_image = "${var.docker_disk_image}"
 }
 
 module "vpc" {
