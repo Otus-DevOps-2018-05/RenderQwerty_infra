@@ -25,12 +25,12 @@ variable "disk_image" {
 }
 
 variable "instance_count" {
-  description = "Count of app instances for load balancing"
+  description = "Count of docker instances for load balancing"
   default     = "1"
 }
 
-variable docker-host_disk_image {
-  description = "Disk image for docker-host"
+variable docker_disk_image {
+  description = "Disk image for docker-reddit"
   default     = "docker-host"
 }
 
@@ -40,11 +40,11 @@ variable "source_range" {
   default     = ["0.0.0.0/0"]
 }
 
-variable "docker-host_provision_status" {
+variable "docker_provision_status" {
   description = "enable or disable provision scripts"
   default     = "false"
 }
 
 variable "ssh_port" {
-  description = "ssh port for docker-host instance"
+  description = "ssh port for instance"
 }

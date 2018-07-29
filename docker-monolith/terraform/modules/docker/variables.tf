@@ -10,7 +10,7 @@ variable zone {
   description = "Zone"
 }
 
-variable docker-host_disk_image {
+variable docker_disk_image {
   description = "Disk image for docker host"
   default     = "docker-host"
 }
@@ -25,7 +25,12 @@ variable "source_range" {
   description = "allow access from this addresses"
 }
 
-variable "docker-host_provision_status" {
+variable "puma_env" {
+  description = "Path to env file for systemd puma unit"
+  default     = "/tmp/puma.env"
+}
+
+variable "docker_provision_status" {
   description = "enable or disable provision scripts"
   default     = "false"
 }
