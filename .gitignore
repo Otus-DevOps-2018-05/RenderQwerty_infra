@@ -19,3 +19,9 @@ ansible/*.log
 .pytest_cache
 venv/
 ansible/playbooks/packer_db.retry
+
+# docker infra
+docker-monolith/ansible/roles/
+docker-monolith/ansible/*.key
+docker-monolith/ansible/environments/*/key.json
+docker-monolith/docker/*
