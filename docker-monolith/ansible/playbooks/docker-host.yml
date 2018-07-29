@@ -1,6 +1,6 @@
 ---
 - name: Configure docker-host
-  hosts: all
+  hosts: tag_docker-host
   become: true
   roles:
     - geerlingguy.docker
