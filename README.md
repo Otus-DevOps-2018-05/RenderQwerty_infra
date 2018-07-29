@@ -1,8 +1,12 @@
 # Infrastructure for @express42 devops course
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra)
 
- # Homework 12 - docker-1
+ # Homework 13 - docker-2
  - В случае запуска docker контейнера с аргументом `--pid host` мы запускаем контейнер в неймспейсе нашей локальной машины, и таким образом предоставляем процессам внутри контейнера доступ к процессам хоста. 
+  ### Задание со * 
+ - В директории `docker-monolith` добавлены шаблоны инфраструктуры для gcloud проекта 'docker'. (Дальнейшие инструкции выполняются относительно каталога docker-monolith).
+   - Cкриптом `config/gcloud.sh` добавляем в метаданные нового проекта публичный ключ пользователя и создаём правило firewall, разрешающее входящие подключения по ssh для провижинеров packer.
+   - Собираем через packer и ansible provisioner образ с установленным docker: `packer build -var-file=packer/variables.json packer/docker-host.json`. На этом-же этапе добавим пользователя `appuser` в группу `docker`.
 
  # Homework 12 - docker-1
  - Установлен docker и протестирован его успешный запуск

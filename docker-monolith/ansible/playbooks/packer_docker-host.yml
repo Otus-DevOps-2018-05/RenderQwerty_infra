@@ -2,5 +2,7 @@
 - name: Configure docker-host
   hosts: all
   become: true
+  vars:
+    docker_users: appuser
   roles:
     - geerlingguy.docker

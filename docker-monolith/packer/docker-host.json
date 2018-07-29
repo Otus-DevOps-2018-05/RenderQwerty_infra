@@ -15,9 +15,9 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-app-{{timestamp}}",
-            "image_family": "reddit-app-base",
-            "image_description": "ubuntu image with installed ruby",
+            "image_name": "docker-host-{{timestamp}}",
+            "image_family": "docker-host",
+            "image_description": "ubuntu image with installed docker",
             "source_image_family": "{{user `source_image_family`}}",
             "zone": "europe-west4-a",
             "ssh_username": "{{user `ssh_username`}}",
