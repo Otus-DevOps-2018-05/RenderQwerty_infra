@@ -1,0 +1,6 @@
+---
+- name: Configure MongoDB
+  hosts: tag_reddit-db
+  become: true
+  roles:
+    - renderqwerty.ansible_role_mongo

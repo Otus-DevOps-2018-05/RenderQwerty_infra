@@ -1,9 +1,23 @@
 dist: trusty
 sudo: required
 language: bash
+
 before_install:
   - curl https://raw.githubusercontent.com/express42/otus-homeworks/2018-05/run.sh | bash
-notifications:
-  slack:
-    rooms:
-      secure: OO0ccVCqJg4vClu02GjcoGZ3R1QPd7v9xSUmUCYkPEO3onL2390YScZIPqPAYdXKY5kC/61EwrFefAH7fIg8nQeOs5X7Abp4mmHITZfC1laxuwFCeUZLurcfdw23ek6m5xB4Ic/XGP9uLcc/BHkKqJ2dQBa5U/V/5c7DUM++pLAcfArGGKXyqnTLHYRINc6Z2VdRrAq5aEPDEo+GbLx5DocpPiq1bCk0b30CGzGEWG4AFS7/bJndcq1wbxCkuDaBiP2V/1arZr39wSQ590KCJhMNrnM/cl5ixffusHtuJMD5uj52g1IBPCk1JpsWlrDVv8utdJuU6E/EErEOxwyr/qPGSza5Ft1Gbmw2veUb77cQauGDib8bTJzlJoEDbYrze2PU/VUxbI8coPedKCAOZVRqQnAf0JQt+ZKRlWJrOXT4dnkrN17GqMM7mXpvgXb4589QvMR5QqlK/kupwbS07nOXZZRS/oNBvgsprDbBTF++eWoZ6QWq4Qy4YYirIQTBSI4q6zxycj/swbBbZPF5qkllD1vcV/qHPQZRsYmFPQh9Fp85TsxZF1CiBYcQe0/eb6U3A9VSuypKnUFcQbxxF1Zu9uTBlADgjEZgQeVB8xrL1QJaFroZ3QSuwvuCDmqoNNfvmA8l9Xm4BwXEmgStGVUrmvuT3gX950uJ+u+ehk8=
+
+install:
+  - curl https://raw.githubusercontent.com/RenderQwerty/express_devops-homeworks/master/install-dependencies.sh | sudo bash
+
+script:
+  - curl https://raw.githubusercontent.com/RenderQwerty/express_devops-homeworks/master/validate_packer.sh | bash
+  - curl https://raw.githubusercontent.com/RenderQwerty/express_devops-homeworks/master/validate_terraform.sh | bash
+  - curl https://raw.githubusercontent.com/RenderQwerty/express_devops-homeworks/master/validate_ansible.sh | bash
+
+branches:
+  only:
+    - ansible-3
+    - ansible-4
+    - docker-1
+    - docker-2
+    - docker-3
+    - master

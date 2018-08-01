@@ -3,7 +3,25 @@
 *.tfstate.backup
 *.tfvars
 .terraform/
-*.retry
+ansible/*.retry
 ansible/key.json
 ansible/vault.key
-ansible/gce.ini
+ansible/roles/jdauphant.nginx
+ansible/roles/renderqwerty.ansible_role_mongo/
+!ansible/roles/**/molecule/
+ansible/environments/*/key.json
+# Vagrant & molecule
+.vagrant/
+ansible/*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
+venv/
+ansible/playbooks/packer_db.retry
+
+# docker infra
+docker-monolith/ansible/roles/
+docker-monolith/ansible/*.key
+docker-monolith/ansible/environments/*/key.json
+docker-monolith/docker/*
