@@ -1,5 +1,6 @@
-FROM ruby:2.2
-RUN apt-get update -qq && apt-get install -y build-essential=11.7 --no-install-recommends \
+FROM ruby:2.3
+RUN apt-get update -qq && apt-get install -y --no-install-recommends \
+    build-essential=11.7 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
