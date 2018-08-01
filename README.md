@@ -1,6 +1,28 @@
 # Infrastructure for @express42 devops course
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra)
 
+ # Homework 14 - docker-3
+ ### Задание со * 
+   -
+      Запускаем контейнеры с другими алиасами и переопределяем переменные окружения при запуске контейнера:
+```
+          docker run -d --network=reddit --network-alias=db mongo:latest
+          docker run -d --network=reddit --network-alias=post1 \
+            -e "POST_DATABASE_HOST=db" \
+            jaels/post:1.0
+
+          docker run -d --network=reddit --network-alias=comment1 \
+            -e "COMMENT_DATABASE_HOST=db" \
+            jaels/comment:1.0
+
+          docker run -d --network=reddit -p 9292:9292 \
+            -e "POST_SERVICE_HOST=post1" \
+            -e "COMMENT_SERVICE_HOST=comment1" \
+            jaels/ui:1.0
+```
+  - С образом alpine получилось получилось уменьшить размер ui до 219 MB.
+
+
  # Homework 13 - docker-2
  - В случае запуска docker контейнера с аргументом `--pid host` мы запускаем контейнер в неймспейсе нашей локальной машины, и таким образом предоставляем процессам внутри контейнера доступ к процессам хоста. 
   ### Задание со * 
