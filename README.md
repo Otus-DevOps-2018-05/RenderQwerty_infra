@@ -20,7 +20,7 @@
             -e "COMMENT_SERVICE_HOST=comment1" \
             jaels/ui:1.0
 ```
-  - С образом alpine получилось получилось уменьшить размер ui до 219 MB.
+  - С образом alpine (ui/Dockerfile.1) получилось получилось уменьшить размер ui c 397 до 219 MB.
 
 
  # Homework 13 - docker-2
