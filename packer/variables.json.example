@@ -2,7 +2,6 @@
     "project_id": "infra-123456",
     "source_image_family": "ubuntu-1604-lts",
     "ssh_username": "username",
-    "image_description": "base image for reddit-app",
     "disk_size": "12",
     "disk_type": "pd-ssd",
     "tags": "example-tag",

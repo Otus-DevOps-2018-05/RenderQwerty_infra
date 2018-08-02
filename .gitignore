@@ -3,7 +3,10 @@
 *.tfstate.backup
 *.tfvars
 .terraform/
-*.retry
+ansible/*.retry
 ansible/key.json
 ansible/vault.key
-ansible/gce.ini
+ansible/roles/jdauphant.nginx
+ansible/environments/*/key.json
+.vagrant/
+Vagrantfile

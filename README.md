@@ -1,4 +1,14 @@
- # Homework 09 - ansible-1
+# Infrastructure for @express42 devops course
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra)
+ 
+ # Homework 10 - ansible-3
+ - В код терраформа добавлено правило доступа к 80 порту и использована ansible роль jdauphant.nginx в качестве фронтенда.
+ ### Задание со *
+ - Для того, чтобы было возможно разделить ключи доступа к проекту gcloud по окружениям, в параметрах `gce.ini` (которые различаются для каждого окружения) указывается путь к файлу `key.json`. Путь специально указан относительно директории ansible, т.к. именно оттуда чаще всего выполняется команда `ansible-playbook`.
+ ### Задание с **
+ - Добавлены тесты travis для валидации шаблонов packer, terraform и плейбуков ansible. 
+
+ # Homework 09 - ansible-2
  В качестве dynamic inventory в этот раз решил использовать gce.py (в прошлом ДЗ пользовался https://github.com/adammck/terraform-inventory). Для его настройки необходимо создать сервисный аккаунт, от имени которого будет работать скрипт:
 - `gcloud iam service-accounts create ansible --display-name "Ansible service account"`
 - `gcloud projects add-iam-policy-binding compute-trial --member serviceAccount:ansible@infra-12345.iam.gserviceaccount.com --role roles/editor`
