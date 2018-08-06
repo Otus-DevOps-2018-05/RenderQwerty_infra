@@ -1,6 +1,12 @@
 # Infrastructure for @express42 devops course
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra.svg?branch=master)](https://travis-ci.com/Otus-DevOps-2018-05/RenderQwerty_infra)
- 
+
+ # Homework 11 - ansible-4
+- Настроены vagrant для локального поднятия тестовой среды и molecule для тестирования.
+ ### Задание со *
+ - В конфигурацию vagrant добавлен провижининг nginx в качестве фронтенда.
+ - Роль DB вынесена в отдельный репозиторий github и загружается через ansible-galaxy.
+
  # Homework 10 - ansible-3
  - В код терраформа добавлено правило доступа к 80 порту и использована ansible роль jdauphant.nginx в качестве фронтенда.
  ### Задание со *

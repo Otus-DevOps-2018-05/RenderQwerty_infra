@@ -1,13 +1,6 @@
 ---
-- name: install ruby dependencies
+- name: Configure App
   hosts: all
   become: true
-  tasks:
-   - name: install ruby deps
-     apt:
-       name: "{{ item }}"
-       state: present
-     loop:
-       - ruby-full
-       - ruby-bundler
-       - build-essential
+  roles:
+    - app
